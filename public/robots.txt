@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <!-- تم إضافة أيقونة الموقع (Favicon) هنا -->
+    <link rel="icon" type="image/png" href="/zubda-mascot.png" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>زبِدة — مساعدك الذكي للبحث العلمي</title>
+    <meta name="description" content="زبِدة - منصة بحث علمي ذكية باللغة العربية. ابحث واستكشف الأوراق البحثية والدراسات الأكاديمية." />
+    <meta name="author" content="زبِدة" />
+    <meta property="og:title" content="زبِدة — مساعدك الذكي للبحث العلمي" />
+    <meta property="og:description" content="منصة بحث علمي ذكية باللغة العربية" />
+    <meta property="og:type" content="website" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

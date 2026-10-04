@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Amiri:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 80% 96%;
+    --foreground: 216 100% 11%;
+
+    --card: 38 42% 90%;
+    --card-foreground: 216 100% 11%;
+
+    --popover: 40 80% 96%;
+    --popover-foreground: 216 100% 11%;
+
+    --primary: 39 67% 28%;
+    --primary-foreground: 40 80% 96%;
+
+    --secondary: 36 38% 82%;
+    --secondary-foreground: 216 100% 11%;
+
+    --muted: 38 42% 90%;
+    --muted-foreground: 210 20% 40%;
+
+    --accent: 39 60% 59%;
+    --accent-foreground: 216 100% 11%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 36 33% 70%;
+    --input: 36 33% 70%;
+    --ring: 39 67% 28%;
+
+    --radius: 0.75rem;
+
+    --navy: 216 100% 11%;
+    --navy-mid: 210 44% 19%;
+    --navy-light: 207 37% 24%;
+    --navy-muted: 205 37% 29%;
+    --gold: 39 52% 47%;
+    --gold-light: 39 60% 59%;
+    --gold-dark: 39 67% 28%;
+    --beige-lightest: 37 53% 96%;
+    --beige-light: 38 42% 90%;
+    --beige: 36 38% 82%;
+    --beige-dark: 36 33% 70%;
+
+    --sidebar-background: 38 42% 90%;
+    --sidebar-foreground: 216 100% 11%;
+    --sidebar-primary: 39 67% 28%;
+    --sidebar-primary-foreground: 40 80% 96%;
+    --sidebar-accent: 36 38% 82%;
+    --sidebar-accent-foreground: 216 100% 11%;
+    --sidebar-border: 36 33% 70%;
+    --sidebar-ring: 39 67% 28%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    direction: rtl;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-tajawal;
+  }
+}
+
+@layer utilities {
+  .font-amiri {
+    font-family: 'Amiri', serif;
+  }
+
+  .font-tajawal {
+    font-family: 'Tajawal', sans-serif;
+  }
+
+  .bg-navy {
+    background-color: hsl(var(--navy));
+  }
+
+  .bg-navy-mid {
+    background-color: hsl(var(--navy-mid));
+  }
+
+  .text-navy {
+    color: hsl(var(--navy));
+  }
+
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+
+  .text-gold-light {
+    color: hsl(var(--gold-light));
+  }
+
+  .text-gold-dark {
+    color: hsl(var(--gold-dark));
+  }
+
+  .bg-beige-lightest {
+    background-color: hsl(var(--beige-lightest));
+  }
+
+  .bg-beige-light {
+    background-color: hsl(var(--beige-light));
+  }
+
+  .bg-beige {
+    background-color: hsl(var(--beige));
+  }
+
+  .border-gold {
+    border-color: hsl(var(--gold));
+  }
+
+  .border-gold-light {
+    border-color: hsl(var(--gold-light));
+  }
+
+  .border-gold-subtle {
+    border-color: hsl(var(--gold) / 0.2);
+  }
+
+  .gradient-gold {
+    background: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 100%);
+  }
+
+  .shadow-gold {
+    box-shadow: 0 8px 24px hsl(var(--gold) / 0.3);
+  }
+
+  .ornament-border {
+    border-image: linear-gradient(90deg, transparent, hsl(var(--gold-light)), hsl(var(--gold)), hsl(var(--gold-light)), transparent) 1;
+  }
+}
+
+/* الضربة القاضية: إخفاء علامة Lovable الإجباري */
+#lovable-badge, 
+.lovable-badge, 
+[class*="lovable"],
+[id*="lovable"],
+a[href*="lovable.dev"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    z-index: -9999 !important;
+}
